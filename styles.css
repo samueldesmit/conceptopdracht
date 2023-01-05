@@ -25,21 +25,21 @@
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-
 }
 
 /* ------------------------------- 2. Typography ----------------------------------- */
 * {
-    font-family: 'Merriweather', serif;
+    font-family: 'Roboto', sans-serif;
+
 }
 
-/*h1, h2, h3, h4 {*/
-/*    font-family: 'Roboto', sans-serif;*/
+h1, h2, h3, h4 {
+    font-family: 'Merriweather', serif;
 
-/*}*/
+}
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
@@ -62,38 +62,73 @@
 .inner-container1 {
     border: 2px dashed red;
     margin: 0 20px;
-    display: flex;
-    flex-direction: column;
+
     flex-basis: 1000px;
     flex-grow: 0;
     flex-shrink: 1;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .inner-container2 {
     border: 2px dashed red;
-    margin: 50px 20px;
-    display: flex;
-    flex-direction: column;
+    margin: 0 20px;
+    text-align: center;
+
     flex-basis: 700px;
     flex-grow: 0;
     flex-shrink: 1;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: inherit;
+    align-items: center;
 }
 
 header {
-    text-align: center;
+    position: relative;
     color: white;
-    background-color: #4845E4;
-    padding: 40px 0;
+    background: linear-gradient(90deg, rgba(72,69,228,1) 35%, rgba(87,34,205,1) 100%);
+    padding: 100px 0;
+}
+
+header img {
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+
+}
+
+
+header p {
+    font-weight: 300;
+    margin: 20px 0;
+}
+
+h1 {
+    margin: 0 0;
+    font-size: 40px;
+    font-weight: 300;
+    text-decoration-style: dotted;
 }
 
 header button {
+    width: 160px;
+    height: 40px;
     border-radius: 20px 20px;
-    width: 150px;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 100;
+    background-color: #ED4385;
+    box-shadow: 1px 1px 5px black;
+
 }
 
 nav {
-    background-color: #4845E4;
-
+    background: linear-gradient(90deg, rgba(72,69,228,1) 35%, rgba(87,34,205,1) 100%);
 }
 
 nav ul {
@@ -111,4 +146,19 @@ ul a {
 
 /* --------------- 4.2 Introduction ------------------- */
 
+.section1 {
+    color: #4845E4;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+#introduction-question {
+    color: black;
+    padding: 50px 0 0 0;
+    font-size: 14px;
+}
+
+#introduction-question a{
+    text-decoration: none;
+}
 /* ------------------------------- 5. Media Queries -------------------------------- */
