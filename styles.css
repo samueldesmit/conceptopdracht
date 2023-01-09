@@ -89,7 +89,7 @@ h1, h2, h3, h4 {
 header {
     position: relative;
     color: white;
-    background: linear-gradient(90deg, rgba(72,69,228,1) 35%, rgba(87,34,205,1) 100%);
+    background: linear-gradient(90deg, rgba(72, 69, 228, 1) 35%, rgba(87, 34, 205, 1) 100%);
     padding: 100px 0;
 }
 
@@ -128,7 +128,7 @@ header button {
 }
 
 nav {
-    background: linear-gradient(90deg, rgba(72,69,228,1) 35%, rgba(87,34,205,1) 100%);
+    background: linear-gradient(90deg, rgba(72, 69, 228, 1) 35%, rgba(87, 34, 205, 1) 100%);
 }
 
 nav ul {
@@ -146,10 +146,11 @@ ul a {
 
 /* --------------- 4.2 Introduction ------------------- */
 
-.section1 {
+.section1 p {
     color: #4845E4;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 30px;
+    font-family: 'Merriweather', serif;
 }
 
 #introduction-question {
@@ -158,7 +159,66 @@ ul a {
     font-size: 14px;
 }
 
-#introduction-question a{
+#introduction-question a {
     text-decoration: none;
 }
+
 /* ------------------------------- 5. Media Queries -------------------------------- */
+
+.section-article {
+    background-color: #F3F6F9;
+}
+
+article {
+    margin: 20px 0 20px 0;
+    display: flex;
+    flex-direction: row;
+}
+
+article:nth-child(even) {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.article-div {
+    border: 2px dashed pink;
+    margin: 10px 100px 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 33%;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.article-div img {
+    width: 40px;
+    padding: 10px 0 10px 0;
+}
+
+.article-div a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 10px;
+    color: #5722CD;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+}
+
+.image-wrapper {
+    flex-basis: 100%;
+    max-width: 67%;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.article-image{
+    width: 100%;
+    box-shadow: 4px 15px 40px grey;
+}
+
+
+
+
+
