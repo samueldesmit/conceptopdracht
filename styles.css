@@ -114,17 +114,34 @@ h1 {
 }
 
 header button {
-    width: 180px;
-    height: 45px;
+    width: 200px;
+    height: 60px;
     margin: 0 0 50px 0;
-    border-radius: 25px 25px;
+    border-radius: 30px 30px;
     border: none;
     color: white;
     text-transform: uppercase;
-    font-size: 11px;
-    font-weight: 300;
+    font-size: 13px;
+    font-weight: 500;
     background-color: #ED4385;
     box-shadow: 1px 1px 5px black;
+}
+
+
+@media screen and (min-width: 576px) {
+    header button {
+        width: 180px;
+        height: 45px;
+        margin: 0 0 50px 0;
+        border-radius: 25px 25px;
+        border: none;
+        color: white;
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 300;
+        background-color: #ED4385;
+        box-shadow: 1px 1px 5px black;
+    }
 }
 
 nav {
@@ -136,9 +153,20 @@ nav ul {
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-evenly;
     gap: 35px;
 }
+
+@media screen and (min-width: 576px) {
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 35px;
+    }
+}
+
 
 ul a {
     color: white;
@@ -176,35 +204,60 @@ ul a {
 
 .section-article {
     background-color: #F3F6F9;
-    padding: 10px 0 100px 0;
+    padding: 100px 0 100px 0;
+}
+
+@media screen and (min-width: 576px) {
+    .section-article {
+        background-color: #F3F6F9;
+        padding: 10px 0 100px 0;
+    }
 }
 
 .article-projects {
-    margin: 40px 0 40px 0;
+    margin: 0 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
 }
 
-.article-projects:nth-child(even) {
-    display: flex;
-    flex-direction: row-reverse;
+@media screen and (min-width: 576px) {
+    .article-projects {
+        margin: 40px 0 40px 0;
+        display: flex;
+        flex-direction: row;
+    }
 }
 
-.article-projects:nth-child(even) .article-div {
-    /*border: 2px dashed pink;*/
-    margin: 10px 20px 10px 100px;
+@media screen and (min-width: 576px) {
+    .article-projects:nth-child(even) {
+        display: flex;
+        flex-direction: row-reverse;
+    }
 }
 
+@media screen and (min-width: 576px) {
+    .article-projects:nth-child(even) .article-div {
+        /*border: 2px dashed pink;*/
+        margin: 10px 20px 10px 100px;
+    }
+}
 
 .article-div {
-    /*border: 2px dashed pink;*/
-    margin: 10px 100px 10px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 33%;
-    flex-grow: 0;
-    flex-shrink: 1;
+    max-width: 100%;
+    margin: 30px 10px 30px 10px;
+
+}
+
+@media screen and (min-width: 576px) {
+    .article-div {
+        margin: 10px 100px 10px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 33%;
+        flex-grow: 0;
+        flex-shrink: 1;
+    }
 }
 
 .article-div img {
@@ -213,25 +266,20 @@ ul a {
 }
 
 .article-div p {
+    padding: 30px 0 30px 0;
+
     font-weight: 300;
     font-size: 16px;
 }
 
 .article-div a {
-    margin: 30px 0 0 0;
+    padding: 30px 0 0 0;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 10px;
     color: #5722CD;
     font-weight: 700;
     letter-spacing: 2px;
-
-}
-
-.image-wrapper {
-    flex-basis: 100%;
-    max-width: 67%;
-    flex-grow: 0;
     flex-shrink: 1;
 }
 
@@ -239,13 +287,24 @@ ul a {
     width: 100%;
     box-shadow: 4px 15px 40px grey;
     flex-basis: 100%;
-
 }
+
+
+@media screen and (min-width: 576px) {
+    .image-wrapper {
+        flex-basis: 100%;
+        max-width: 67%;
+        flex-grow: 0;
+        flex-shrink: 1;
+    }
+}
+
+
 
 /* ------------------------------- 4.4 Services -------------------------------- */
 
 .services {
-    padding:90px 0 90px 0;
+    padding: 90px 0 90px 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -254,20 +313,39 @@ ul a {
 }
 
 .services article {
-    flex-basis: 250px;
-    min-height: 250px;
-    min-width: 250px;
+    flex-basis: 325px;
+    min-height: 325px;
+    min-width: 325px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     border: 1px solid #4845E4;
     padding: 10px 10px 10px 10px;
     box-shadow: 1px 1px 5px grey;
+}
 
+@media screen and (min-width: 576px) {
+    .services article {
+        flex-basis: 250px;
+        min-height: 250px;
+        min-width: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid #4845E4;
+        padding: 10px 10px 10px 10px;
+        box-shadow: 1px 1px 5px grey;
+    }
 }
 
 .service-article img {
-    max-width: 50px;
+    max-width: 75px;
+}
+
+@media screen and (min-width: 576px) {
+    .service-article img {
+        max-width: 50px;
+    }
 }
 
 .service-article h3 {
@@ -275,19 +353,35 @@ ul a {
     margin: 10px 0 20px 0;
 }
 
+
 .service-article p {
     color: #7A7A7A;
-    font-size: 12px;
-    font-weight: 100;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+@media screen and (min-width: 576px) {
+    .service-article p {
+        color: #7A7A7A;
+        font-size: 12px;
+        font-weight: 100;
+    }
 }
 
 /* ------------------------------- 4.5 Form -------------------------------- */
 
-
 .form-outer-container {
     background: linear-gradient(90deg, rgba(72, 69, 228, 1) 35%, rgba(87, 34, 205, 1) 100%);
     color: #F3F6F9;
-    padding: 45px 0 45px 0;
+    padding: 150px 0 45px 0;
+}
+
+@media screen and (min-width: 576px) {
+    .form-outer-container {
+        background: linear-gradient(90deg, rgba(72, 69, 228, 1) 35%, rgba(87, 34, 205, 1) 100%);
+        color: #F3F6F9;
+        padding: 45px 0 45px 0;
+    }
 }
 
 .form-div h3 {
@@ -309,17 +403,33 @@ form {
 }
 
 form label {
-    font-size: 12px;
+    font-size: 16px;
     margin: 15px 0 0 0;
 }
 
+@media screen and (min-width: 576px) {
+    form label {
+        font-size: 12px;
+        margin: 15px 0 0 0;
+    }
+}
+
 form input {
-    padding: 10px 5px 10px 10px;
+    padding: 20px 5px 20px 10px;
     flex-grow: 1;
     flex-shrink: 1;
     width: 100%;
     border: none;
+}
 
+@media screen and (min-width: 576px) {
+    form input {
+        padding: 10px 5px 10px 10px;
+        flex-grow: 1;
+        flex-shrink: 1;
+        width: 100%;
+        border: none;
+    }
 }
 
 form textarea {
@@ -332,22 +442,47 @@ form textarea {
 .form-div button {
     margin: 30px 0 35px 0;
     align-self: center;
-    width: 120px;
-    height: 40px;
-    border-radius: 20px 20px;
+    width: 160px;
+    height: 60px;
+    border-radius: 30px 30px;
     border: none;
     color: white;
     text-transform: uppercase;
-    font-size: 11px;
-    font-weight: 300;
+    font-size: 13px;
+    font-weight: 500;
     background-color: #ED4385;
     box-shadow: 1px 1px 5px black;
 }
 
+@media screen and (min-width: 576px) {
+    .form-div button {
+        margin: 30px 0 35px 0;
+        align-self: center;
+        width: 120px;
+        height: 40px;
+        border-radius: 20px 20px;
+        border: none;
+        color: white;
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 300;
+        background-color: #ED4385;
+        box-shadow: 1px 1px 5px black;
+    }
+}
+
 form ::placeholder {
-    font-weight: 100;
-    font-size: 10px;
+    font-weight: 300;
+    font-size: 15px;
     color: #7A7A7A;
+}
+
+@media screen and (min-width: 576px) {
+    form ::placeholder {
+        font-weight: 100;
+        font-size: 10px;
+        color: #7A7A7A;
+    }
 }
 
 /* ------------------------------- 4.6 `Footer` -------------------------------- */
