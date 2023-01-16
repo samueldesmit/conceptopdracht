@@ -10,8 +10,8 @@
 <nav class="outer-container">
     <div class="inner-container1">
         <ul>
-            <li><a href="#">Case Studies</a></li>
-            <li><a href="#">Services</a></li>
+            <li><a href="#case_studies">Case Studies</a></li>
+            <li><a href="#services">Services</a></li>
             <li><a href="#form">Contact Us</a></li>
         </ul>
     </div>
@@ -33,16 +33,18 @@
 
 <main>
     <section class="outer-container">
-        <div class="section1 inner-container2">
+        <div class="section1 inner-container2" >
             <p> Rekupe is a digital agency in Los Angeles.</p>
+
             <p> We use strategic UX, SEO optimization and beautiful visual
                 designs to help your business grow. </p>
             <p>We see every project as a fresh opportunity, pushing ourselves to create new digital experiences. </p>
+
             <p id="introduction-question"> Have a question? <a href="#">Click here</a> to contact us! </p>
         </div>
     </section>
 
-    <section class="section-article outer-container">
+    <section class="section-article outer-container" id="case_studies">
         <div class="inner-container1">
             <article class="article-projects">
                 <div class="article-div">
@@ -88,7 +90,7 @@
         </div>
     </section>
 
-    <section class="outer-container">
+    <section class="outer-container" id="services">
         <div class="inner-container1 services">
             <article class="service-article">
                 <img src="assets/icon_web-design.svg" alt="Icon for web design">
@@ -103,7 +105,7 @@
                 <p>Modern websites need to be responsive and fully functional at all sizes. We develop all of our sites
                     with a mobile first approach and ensure that our code quality is clean, organized and performant.
                     Already have a design but need it developed? We’re here to help!</p>
-            </article >
+            </article>
             <article class="service-article">
                 <img src="assets/icon_ux.svg" alt="Icon User Experience">
                 <h3>User Experience </h3>
@@ -137,9 +139,21 @@
         </div>
     </section>
 
-    <section class="outer-container">
-        <div class="inner-container2">
-            <form action="" id="form"></form>
+    <section class="outer-container form-outer-container">
+        <div class="inner-container2 form-div">
+            <h3>Let's work together</h3>
+
+            <p>Have a question? Need a quote? Let us know!</p>
+
+            <form action="" id="form" onsubmit="#">
+                <label for="namefield">Name</label>
+                <input id="namefield" type="text" placeholder="Name">
+                <label for="emailfield">Email</label>
+                <input type="email" placeholder="Email" id="emailfield">
+                <label for="messagefield">Message</label>
+                <textarea name="massage" id="messagefield" cols="30" rows="10" placeholder="Message"></textarea>
+                <button type="submit" >send</button>
+            </form>
         </div>
     </section>
 </main>
