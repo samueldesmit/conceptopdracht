@@ -1,14 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-/*Paars #5722CD;*/
-/*Blauw #4845E4;*/
-/*Roze #ED4385;*/
-/*Zwart #0C0C0C (voor standaard tekst);*/
-/*Lichtpaars #F2F0FF (voor de grote zwevende woorden, zoals "hello" en "services") Uitzonderingen:*/
-/*Lichtgrijs #F3F6F9 (voor de achtergrond van de projecten)*/
-/*Grijs #7A7A7A (voor de service-tegel tekst);*/
-
-
 /*////////////////////////
     Table of Contents
     1. Global Styles
@@ -82,6 +73,25 @@ h1, h2, h3, h4 {
 
 /* --------------- 3.1 Reusables ----------------------- */
 
+:root {
+    --gradient: linear-gradient(90deg, rgba(72, 69, 228, 1) 35%, rgba(87, 34, 205, 1) 100%);
+    --paars: #5722CD;
+    --blauw: #4845E4;
+    --roze: #ED4385;
+    --zwart: #0C0C0C;
+    --lichtpaars: #F2F0FF;
+    --lichtgrijs: #F3F6F9;
+    --grijs: #7A7A7A;
+
+    /*Paars #5722CD;*/
+    /*Blauw #4845E4;*/
+    /*Roze #ED4385;*/
+    /*Zwart #0C0C0C (voor standaard tekst);*/
+    /*Lichtpaars #F2F0FF (voor de grote zwevende woorden, zoals "hello" en "services") Uitzonderingen:*/
+    /*Lichtgrijs #F3F6F9 (voor de achtergrond van de projecten)*/
+    /*Grijs #7A7A7A (voor de service-tegel tekst);*/
+}
+
 /* --------------- 3.2 Other --------------------------- */
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
@@ -91,7 +101,7 @@ h1, h2, h3, h4 {
 header {
     position: relative;
     color: white;
-    background: linear-gradient(90deg, rgba(72, 69, 228, 1) 35%, rgba(87, 34, 205, 1) 100%);
+    background: var(--gradient);
     padding: 100px 0;
 }
 
@@ -144,8 +154,21 @@ header button {
     }
 }
 
+.driekhoek-header {
+    width: inherit;
+    height: 0;
+    border-image: var(--gradient);
+    /*border-left: 100px solid green;*/
+    border-right: 100vw solid blue;
+    border-bottom: 150px solid transparent;
+    clip-path: polygon(100% 0%, 0% 0%, 100% 100%);
+
+    /*border-top: 100px solid red;*/
+
+}
+
 nav {
-    background: linear-gradient(90deg, rgba(72, 69, 228, 1) 35%, rgba(87, 34, 205, 1) 100%);
+    background: var(--gradient);
     padding: 10px 10px 0 0;
 }
 
@@ -300,7 +323,6 @@ ul a {
 }
 
 
-
 /* ------------------------------- 4.4 Services -------------------------------- */
 
 .services {
@@ -370,15 +392,25 @@ ul a {
 
 /* ------------------------------- 4.5 Form -------------------------------- */
 
+.driekhoek-form {
+    width: inherit;
+    height: 0;
+    border-image: var(--gradient);
+    /*border-left: 100px solid green;*/
+    border-right: 100vw solid blue;
+    border-bottom: 150px solid transparent;
+    clip-path: polygon(0% 100%, 0% 0%, 100% 100%);
+}
+
 .form-outer-container {
-    background: linear-gradient(90deg, rgba(72, 69, 228, 1) 35%, rgba(87, 34, 205, 1) 100%);
+    background: var(--gradient);
     color: #F3F6F9;
     padding: 150px 0 45px 0;
 }
 
 @media screen and (min-width: 576px) {
     .form-outer-container {
-        background: linear-gradient(90deg, rgba(72, 69, 228, 1) 35%, rgba(87, 34, 205, 1) 100%);
+        background: var(--gradient);
         color: #F3F6F9;
         padding: 45px 0 45px 0;
     }
