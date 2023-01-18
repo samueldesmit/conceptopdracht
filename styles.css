@@ -45,9 +45,7 @@ h1, h2, h3, h4 {
 }
 
 .inner-container1 {
-    /*border: 2px dashed red;*/
     margin: 0 20px;
-
     flex-basis: 1000px;
     flex-grow: 0;
     flex-shrink: 1;
@@ -57,7 +55,6 @@ h1, h2, h3, h4 {
 }
 
 .inner-container2 {
-    /*border: 2px dashed red;*/
     margin: 0 20px;
     text-align: center;
 
@@ -396,7 +393,6 @@ ul a {
     width: inherit;
     height: 0;
     border-image: var(--gradient);
-    /*border-left: 100px solid green;*/
     border-right: 100vw solid blue;
     border-bottom: 150px solid transparent;
     clip-path: polygon(0% 100%, 0% 0%, 100% 100%);
