@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 /*////////////////////////
     Table of Contents
     1. Global Styles
@@ -8,17 +10,84 @@
     4. Areas
         4.1 Header
         4.2 Introduction
-        etc.
+        4.3 Projects
+        4.4 Services
+        4.5 Form
     5. Media Queries
 ////////////////////////*/
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 /* ------------------------------- 2. Typography ----------------------------------- */
+* {
+    font-family: 'Roboto', sans-serif;
+
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Merriweather', serif;
+
+}
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
+.outer-container {
+    /*border: 2px solid greenyellow;*/
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.inner-container1 {
+    margin: 0 20px;
+    flex-basis: 1000px;
+    flex-grow: 0;
+    flex-shrink: 1;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.inner-container2 {
+    margin: 0 20px;
+    text-align: center;
+
+    flex-basis: 600px;
+    flex-grow: 0;
+    flex-shrink: 1;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: inherit;
+    align-items: center;
+}
+
 /* --------------- 3.1 Reusables ----------------------- */
+
+:root {
+    --gradient: linear-gradient(90deg, rgba(72, 69, 228, 1) 35%, rgba(87, 34, 205, 1) 100%);
+    --paars: #5722CD;
+    --blauw: #4845E4;
+    --roze: #ED4385;
+    --zwart: #0C0C0C;
+    --lichtpaars: #F2F0FF;
+    --lichtgrijs: #F3F6F9;
+    --grijs: #7A7A7A;
+
+    /*Paars #5722CD;*/
+    /*Blauw #4845E4;*/
+    /*Roze #ED4385;*/
+    /*Zwart #0C0C0C (voor standaard tekst);*/
+    /*Lichtpaars #F2F0FF (voor de grote zwevende woorden, zoals "hello" en "services") Uitzonderingen:*/
+    /*Lichtgrijs #F3F6F9 (voor de achtergrond van de projecten)*/
+    /*Grijs #7A7A7A (voor de service-tegel tekst);*/
+}
 
 /* --------------- 3.2 Other --------------------------- */
 
@@ -26,6 +95,433 @@
 
 /* --------------- 4.1 Header ------------------------- */
 
+header {
+    position: relative;
+    color: white;
+    background: var(--gradient);
+    padding: 100px 0;
+}
+
+header img {
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+}
+
+header p {
+    font-weight: 300;
+    margin: 20px 0;
+}
+
+h1 {
+    margin: 0 0;
+    font-size: 35px;
+    font-weight: 500;
+    text-decoration-style: dotted;
+}
+
+header button {
+    width: 200px;
+    height: 60px;
+    margin: 0 0 50px 0;
+    border-radius: 30px 30px;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    background-color: #ED4385;
+    box-shadow: 1px 1px 5px black;
+}
+
+
+@media screen and (min-width: 576px) {
+    header button {
+        width: 180px;
+        height: 45px;
+        margin: 0 0 50px 0;
+        border-radius: 25px 25px;
+        border: none;
+        color: white;
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 300;
+        background-color: #ED4385;
+        box-shadow: 1px 1px 5px black;
+    }
+}
+
+.driekhoek-header {
+    width: inherit;
+    height: 0;
+    border-image: var(--gradient);
+    /*border-left: 100px solid green;*/
+    border-right: 100vw solid blue;
+    border-bottom: 150px solid transparent;
+    clip-path: polygon(100% 0%, 0% 0%, 100% 100%);
+
+    /*border-top: 100px solid red;*/
+
+}
+
+nav {
+    background: var(--gradient);
+    padding: 10px 10px 0 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 35px;
+}
+
+@media screen and (min-width: 576px) {
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 35px;
+    }
+}
+
+
+ul a {
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 14px;
+}
+
 /* --------------- 4.2 Introduction ------------------- */
 
-/* ------------------------------- 5. Media Queries -------------------------------- */
+.section1 {
+    padding: 50px 0 50px 0;
+}
+
+.section1 p {
+    color: #4845E4;
+    padding: 10px 0 10px 0;
+    font-weight: 500;
+    font-size: 23px;
+    font-family: 'Merriweather', serif;
+}
+
+#introduction-question {
+    color: black;
+    padding: 50px 0 0 0;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+#introduction-question a {
+    text-decoration: none;
+}
+
+/* ------------------------------- 4.3 Projects -------------------------------- */
+
+.section-article {
+    background-color: #F3F6F9;
+    padding: 100px 0 100px 0;
+}
+
+@media screen and (min-width: 576px) {
+    .section-article {
+        background-color: #F3F6F9;
+        padding: 10px 0 100px 0;
+    }
+}
+
+.article-projects {
+    margin: 0 0;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+@media screen and (min-width: 576px) {
+    .article-projects {
+        margin: 40px 0 40px 0;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .article-projects:nth-child(even) {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .article-projects:nth-child(even) .article-div {
+        /*border: 2px dashed pink;*/
+        margin: 10px 20px 10px 100px;
+    }
+}
+
+.article-div {
+    max-width: 100%;
+    margin: 30px 10px 30px 10px;
+
+}
+
+@media screen and (min-width: 576px) {
+    .article-div {
+        margin: 10px 100px 10px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 33%;
+        flex-grow: 0;
+        flex-shrink: 1;
+    }
+}
+
+.article-div img {
+    width: 40px;
+    padding: 30px 0 30px 0;
+}
+
+.article-div p {
+    padding: 30px 0 30px 0;
+
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.article-div a {
+    padding: 30px 0 0 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 10px;
+    color: #5722CD;
+    font-weight: 700;
+    letter-spacing: 2px;
+    flex-shrink: 1;
+}
+
+.article-image {
+    width: 100%;
+    box-shadow: 4px 15px 40px grey;
+    flex-basis: 100%;
+}
+
+
+@media screen and (min-width: 576px) {
+    .image-wrapper {
+        flex-basis: 100%;
+        max-width: 67%;
+        flex-grow: 0;
+        flex-shrink: 1;
+    }
+}
+
+
+/* ------------------------------- 4.4 Services -------------------------------- */
+
+.services {
+    padding: 90px 0 90px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.services article {
+    flex-basis: 325px;
+    min-height: 325px;
+    min-width: 325px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #4845E4;
+    padding: 10px 10px 10px 10px;
+    box-shadow: 1px 1px 5px grey;
+}
+
+@media screen and (min-width: 576px) {
+    .services article {
+        flex-basis: 250px;
+        min-height: 250px;
+        min-width: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid #4845E4;
+        padding: 10px 10px 10px 10px;
+        box-shadow: 1px 1px 5px grey;
+    }
+}
+
+.service-article img {
+    max-width: 75px;
+}
+
+@media screen and (min-width: 576px) {
+    .service-article img {
+        max-width: 50px;
+    }
+}
+
+.service-article h3 {
+    color: #4845E4;
+    margin: 10px 0 20px 0;
+}
+
+
+.service-article p {
+    color: #7A7A7A;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+@media screen and (min-width: 576px) {
+    .service-article p {
+        color: #7A7A7A;
+        font-size: 12px;
+        font-weight: 100;
+    }
+}
+
+/* ------------------------------- 4.5 Form -------------------------------- */
+
+.driekhoek-form {
+    width: inherit;
+    height: 0;
+    border-image: var(--gradient);
+    border-right: 100vw solid blue;
+    border-bottom: 150px solid transparent;
+    clip-path: polygon(0% 100%, 0% 0%, 100% 100%);
+}
+
+.form-outer-container {
+    background: var(--gradient);
+    color: #F3F6F9;
+    padding: 150px 0 45px 0;
+}
+
+@media screen and (min-width: 576px) {
+    .form-outer-container {
+        background: var(--gradient);
+        color: #F3F6F9;
+        padding: 45px 0 45px 0;
+    }
+}
+
+.form-div h3 {
+    font-size: 30px;
+    margin: 40px 0 20px 0;
+}
+
+.form-div p {
+    font-size: 12px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+form label {
+    font-size: 16px;
+    margin: 15px 0 0 0;
+}
+
+@media screen and (min-width: 576px) {
+    form label {
+        font-size: 12px;
+        margin: 15px 0 0 0;
+    }
+}
+
+form input {
+    padding: 20px 5px 20px 10px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 100%;
+    border: none;
+}
+
+@media screen and (min-width: 576px) {
+    form input {
+        padding: 10px 5px 10px 10px;
+        flex-grow: 1;
+        flex-shrink: 1;
+        width: 100%;
+        border: none;
+    }
+}
+
+form textarea {
+    padding: 10px 5px 10px 10px;
+    width: 100%;
+    border: none;
+
+}
+
+.form-div button {
+    margin: 30px 0 35px 0;
+    align-self: center;
+    width: 160px;
+    height: 60px;
+    border-radius: 30px 30px;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    background-color: #ED4385;
+    box-shadow: 1px 1px 5px black;
+}
+
+@media screen and (min-width: 576px) {
+    .form-div button {
+        margin: 30px 0 35px 0;
+        align-self: center;
+        width: 120px;
+        height: 40px;
+        border-radius: 20px 20px;
+        border: none;
+        color: white;
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 300;
+        background-color: #ED4385;
+        box-shadow: 1px 1px 5px black;
+    }
+}
+
+form ::placeholder {
+    font-weight: 300;
+    font-size: 15px;
+    color: #7A7A7A;
+}
+
+@media screen and (min-width: 576px) {
+    form ::placeholder {
+        font-weight: 100;
+        font-size: 10px;
+        color: #7A7A7A;
+    }
+}
+
+/* ------------------------------- 4.6 `Footer` -------------------------------- */
+
+footer {
+    padding: 20px 0 20px 0;
+    background-color: black;
+    color: #F3F6F9;
+}
+
+footer p {
+    font-weight: 300;
+    font-size: 10px;
+}
